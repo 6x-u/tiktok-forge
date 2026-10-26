@@ -1,0 +1,11 @@
+include README.md
+include README_PYPI.md
+include LICENSE
+include pyproject.toml
+recursive-include tiktokforge *.py
+recursive-include tiktokforge *.json
+recursive-include tiktokforge *.js
+recursive-include tools *.py
+recursive-include examples *.py
+recursive-include tests *.py
+global-exclude __pycache__ *.py[cod] *.bak
