@@ -1,12 +1,4 @@
-"""Android (app) request signing.
 
-The app signatures are pure arithmetic — Simon/SM3/AES for Argus, a table driven
-mixer for Gorgon, an ARX block for Ladon — so they live in Python and are
-generated locally.  What rotates per release is the *identity* they are keyed
-with: ``version_name``/``version_code``, the SDK version string, the channel and
-the device profile.  Those come from :mod:`tiktokforge.config`, so bumping the
-library to a newer app build is a config edit, not a code edit.
-"""
 
 from __future__ import annotations
 
