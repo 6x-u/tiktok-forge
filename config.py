@@ -1,19 +1,3 @@
-"""Version tables, device profiles and web request defaults.
-
-Everything that TikTok rotates on a release is kept here so an update is a
-single edit instead of a hunt through the algorithms.
-
-``version_code`` is derived from the human version with the scheme TikTok has
-used since 5.x::
-
-    2023 7 00 04 0
-    |    | |  |  |
-    year | minor patch trailing zero
-         major % 10
-
-so ``37.0.4 -> 2023700040`` and ``47.5.3 -> 2023705030``.  Some releases ship a
-code that does not follow the pattern; those live in :data:`VERSION_CODE_OVERRIDES`.
-"""
 
 from __future__ import annotations
 
