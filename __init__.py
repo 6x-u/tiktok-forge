@@ -1,10 +1,4 @@
-"""tiktok-forge — real TikTok signatures for web and app.
 
-Web side executes TikTok's own browser bundle (``js/webmssdk.js``) through a
-small node bridge, so ``X-Bogus`` is whatever the current build emits, not a
-stale Python port.  App side generates Argus/Gorgon/Ladon locally from the
-identity in :mod:`tiktokforge.config`.
-"""
 
 __version__ = "1.1.0"
 __author__ = "MERO"
