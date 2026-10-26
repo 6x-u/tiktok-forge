@@ -1,12 +1,3 @@
-"""``tiktokforge-verify`` — prove the install works end to end.
-
-    tiktokforge-verify              # sign + call a live endpoint
-    tiktokforge-verify --no-net     # signature only
-    tiktokforge-verify --json       # machine readable
-
-Exit code 0 when a signature is produced and, unless ``--no-net``, the endpoint
-returns a payload.
-"""
 
 from __future__ import annotations
 
