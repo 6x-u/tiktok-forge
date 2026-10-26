@@ -1,19 +1,4 @@
-"""Web (``www.tiktok.com``) signatures and request plumbing.
 
-What actually runs on the wire today:
-
-* ``X-Bogus`` — produced by TikTok's own browser bundle
-  (``js/webmssdk.js``, build 1.0.0.417) executed through the node bridge.  The
-  Python side never re-implements it: the table rotates every build and a stale
-  port silently fails at the edge.
-* ``msToken`` — 107 char urlsafe-base64 session token.
-* ``ttwid`` — device cookie, provisioned once from bytedance's union register.
-* ``verifyFp`` / ``s_v_web_id`` — fingerprinted device id.
-
-``X-Gnarly`` is deliberately *not* emitted: the current bundle has no such
-output, so any library that returns one is inventing bytes.  :func:`sign_web`
-returns exactly the headers the SDK hands back.
-"""
 
 from __future__ import annotations
 
