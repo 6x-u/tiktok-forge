@@ -1,21 +1,4 @@
-"""Node bridge for the vendored TikTok web SDK.
 
-The browser bundle that TikTok ships (``js/webmssdk.js``) is the only thing
-that produces signatures the edge actually accepts today.  Re-implementing it
-in Python is a losing race: every build rotates the tables.  So this module
-runs the real bundle instead, inside a small browser shim, and talks to it over
-a pipe.
-
-One node process is started lazily and reused for every signature.  Booting the
-context costs a couple of hundred milliseconds; a signature after that costs
-well under a millisecond.
-
-    from tiktokforge.bridge import get_bridge
-    get_bridge().sign("https://www.tiktok.com/api/post/item_list/?aid=1988")
-
-If node cannot be found, :class:`NodeUnavailable` is raised with the places that
-were searched.
-"""
 
 from __future__ import annotations
 
